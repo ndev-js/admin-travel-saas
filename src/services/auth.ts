@@ -26,6 +26,6 @@ interface AdminLoginPayload {
 }
 
 export const adminLogin = async (payload: AdminLoginPayload) => {
-  const response = await api.post<ApiResponse<AdminLoginResult>>(ENDPOINTS.ADMIN.Auth.login, payload);
+  const response = await api.post<ApiResponse<AdminLoginResult>>(ENDPOINTS.ADMIN.AUTH.LOGIN, payload);
   return response.data.data;
 };
